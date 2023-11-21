@@ -7331,7 +7331,7 @@ a.anchor-link {
     if (!diagrams.length) {
       return;
     }
-    const mermaid = (await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.5.0/mermaid.esm.min.mjs")).default;
+    const mermaid = (await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.0/mermaid.esm.min.mjs")).default;
     const parser = new DOMParser();
 
     mermaid.initialize({
@@ -7651,6 +7651,121 @@ a.anchor-link {
 <li>Abstração: funções fazem o que têm de fazer e não temos de saber os detalhes todos</li>
 <li>Manutenção: se é necessário alterar alguma coisa, podemos simplesmente alterar o código de uma função sem ter de alterar o resto do código</li>
 </ol>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Boas-pr%C3%A1ticas-na-cria%C3%A7%C3%A3o-de-fun%C3%A7%C3%B5es-em-programa%C3%A7%C3%A3o-s%C3%A3o-essenciais-para-garantir-a-clareza,-manutenibilidade-e-efici%C3%AAncia-do-c%C3%B3digo.">Boas práticas na criação de funções em programação são essenciais para garantir a clareza, manutenibilidade e eficiência do código.<a class="anchor-link" href="#Boas-pr%C3%A1ticas-na-cria%C3%A7%C3%A3o-de-fun%C3%A7%C3%B5es-em-programa%C3%A7%C3%A3o-s%C3%A3o-essenciais-para-garantir-a-clareza,-manutenibilidade-e-efici%C3%AAncia-do-c%C3%B3digo.">¶</a></h3><ol>
+<li><p><strong>Nome Claro e Descritivo</strong>: O nome de uma função deve refletir claramente o que ela faz. Evite nomes genéricos e dê preferência a nomes que descrevam a ação realizada ou o resultado retornado.</p>
+</li>
+<li><p><strong>Funções Devem Ser Curtas e Focadas</strong>: Uma função deve realizar uma única tarefa ou um grupo muito relacionado de tarefas. Se uma função está se tornando longa ou complexa, considere dividí-la em funções menores.</p>
+</li>
+<li><p><strong>Parâmetros Limitados</strong>: Tente limitar o número de parâmetros de uma função. Muitos parâmetros podem tornar a função difícil de entender e usar.</p>
+</li>
+<li><p><strong>Evitar Efeitos Colaterais</strong>: Uma boa função deve ser pura, ou seja, não deve ter efeitos colaterais (como alterar variáveis ​​globais ou externas). Funções puras são mais fáceis de testar e depurar.</p>
+</li>
+<li><p><strong>Documentação</strong>: Comente seu código e escreva uma documentação clara para suas funções. Isso deve incluir a finalidade da função, descrição dos parâmetros, o valor de retorno e quaisquer exceções ou casos especiais.</p>
+</li>
+<li><p><strong>Consistência no Estilo de Codificação</strong>: Siga um estilo de codificação consistente. Isso inclui convenções de nomenclatura, formatação e estruturação do código.</p>
+</li>
+<li><p><strong>Use Tipos de Retorno e Parâmetros Explícitos</strong>: Em linguagens que suportam tipagem, especifique os tipos de parâmetros e retorno. Isso melhora a legibilidade e reduz a probabilidade de erros.</p>
+</li>
+<li><p><strong>Tratamento de Erros</strong>: Certifique-se de que a função lida adequadamente com situações de erro ou entradas inválidas, possivelmente lançando exceções ou retornando valores de erro.</p>
+</li>
+<li><p><strong>Evitar Dependências Globais</strong>: Uma função deve, na medida do possível, evitar depender de variáveis ou recursos globais, para facilitar sua reutilização e teste.</p>
+</li>
+<li><p><strong>Testabilidade</strong>: Escreva funções de forma que sejam fáceis de testar. Isso geralmente significa que elas não devem ter dependências ocultas e devem ter resultados previsíveis.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Documentar-fun%C3%A7%C3%B5es">Documentar funções<a class="anchor-link" href="#Documentar-fun%C3%A7%C3%B5es">¶</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>A documentação de funções em Python é geralmente feita usando docstrings. Docstrings são strings literais que aparecem como a primeira declaração em uma função, método, classe ou módulo. Elas são usadas para explicar o propósito e o funcionamento do código. Aqui estão algumas diretrizes sobre como escrever boas docstrings em Python:</p>
+<ol>
+<li><p><strong>Use Três Aspas Duplas</strong>: Inicie e termine uma docstring com três aspas duplas (<code>"""</code>). Isso permite que a string se estenda por várias linhas.</p>
+</li>
+<li><p><strong>Descrição Breve e Clara</strong>: A primeira linha da docstring deve ser uma descrição concisa do propósito da função. Esta linha deve ser uma frase completa terminando com um ponto.</p>
+</li>
+<li><p><strong>Detalhamento Opcional</strong>: Após a linha de descrição inicial, você pode incluir um parágrafo mais detalhado explicando o comportamento da função, seus argumentos, seu valor de retorno e qualquer outra informação relevante.</p>
+</li>
+<li><p><strong>Parâmetros e Tipos</strong>: Liste cada parâmetro e descreva brevemente seu propósito. Se o tipo do parâmetro não é óbvio, inclua isso também.</p>
+</li>
+<li><p><strong>Valor de Retorno</strong>: Descreva o que a função retorna. Inclua o tipo de retorno se não for óbvio.</p>
+</li>
+<li><p><strong>Exceções</strong>: Documente as exceções que a função pode levantar.</p>
+</li>
+<li><p><strong>Exemplos de Uso</strong>: Se possível, inclua um ou mais exemplos de como usar a função. Isso pode ser particularmente útil para funções complexas ou com muitos parâmetros.</p>
+</li>
+<li><p><strong>Consistência</strong>: Mantenha um estilo consistente em todas as suas docstrings. Se estiver trabalhando em um projeto em equipe, siga as convenções de documentação do projeto.</p>
+</li>
+<li><p><strong>PEP 257</strong>: Para orientações mais detalhadas, consulte a PEP 257, que fornece convenções para docstrings em Python.</p>
+</li>
+</ol>
+<p>Exemplo:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Soma dois números e retorna o resultado.</span>
+
+<span class="sd">    Parâmetros:</span>
+<span class="sd">    a (int): o primeiro número a ser somado.</span>
+<span class="sd">    b (int): o segundo número a ser somado.</span>
+
+<span class="sd">    Retorna:</span>
+<span class="sd">    int: a soma de a e b.</span>
+
+<span class="sd">    Exemplo:</span>
+<span class="sd">    &gt;&gt;&gt; add(2, 3)</span>
+<span class="sd">    5</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Este é um formato básico, e você pode adaptá-lo conforme necessário para suas funções específicas. A documentação clara e consistente é uma parte vital do desenvolvimento de software e ajuda a manter o código acessível e sustentável.</p>
 </div>
 </div>
 </div>
