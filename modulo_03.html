@@ -7765,7 +7765,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Este é um formato básico, e você pode adaptá-lo conforme necessário para suas funções específicas. A documentação clara e consistente é uma parte vital do desenvolvimento de software e ajuda a manter o código acessível e sustentável.</p>
+<p>Este é um formato básico, e pode ser adaptado conforme necessário para suas funções específicas. A documentação clara e consistente é uma parte vital do desenvolvimento de software e ajuda a manter o código acessível e sustentável.</p>
 </div>
 </div>
 </div>
@@ -8646,7 +8646,7 @@ Da segunda vez a função é chamada com o argumento "Joaquim" sendo esse o valo
     <span class="n">resultado</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>   <span class="c1">#estamos a utilizar a variável global ou a criar uma nova?</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span> <span class="c1"># não dá erro porque a variável é global</span>
 
-<span class="n">MostraValor</span><span class="p">()</span>
+<span class="n">SomaDoisNumeros</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>   <span class="c1">#variável é global</span>
 </pre></div>
 </div>
@@ -8660,7 +8660,43 @@ Da segunda vez a função é chamada com o argumento "Joaquim" sendo esse o valo
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Na realidade o código apresentado cria uma variável local com o mesmo nome da variável global, se o que pretendemos é mesmo utilizar a variável global temos de alterar o código:</p>
+<p>Mas depois temos problemas como este:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#variáveis globais</span>
+<span class="n">resultado</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">x</span><span class="o">=</span><span class="mi">10</span>
+<span class="n">y</span><span class="o">=</span><span class="mi">5</span>
+
+<span class="k">def</span> <span class="nf">SomaDoisNumeros</span><span class="p">():</span>
+    <span class="n">resultado</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>   <span class="c1">#estamos a utilizar as variáveis globais?</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span> <span class="c1"># não dá erro porque a variável é global</span>
+    <span class="n">x</span><span class="o">=</span><span class="mi">0</span> <span class="c1">#esta linha provoca um erro porque x passa a ser local! (obrigado Python)</span>
+
+<span class="n">SomaDoisNumeros</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>O erro ocorre porque o Python deteta que estamos a alterar o valor da variável X e então cria uma variável local com o mesmo nome da variável global, se o que pretendemos é mesmo alterar a variável global temos de alterar o código:</p>
 </div>
 </div>
 </div>
