@@ -7672,7 +7672,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Boas-pr%C3%A1ticas-na-cria%C3%A7%C3%A3o-de-fun%C3%A7%C3%B5es-em-programa%C3%A7%C3%A3o-s%C3%A3o-essenciais-para-garantir-a-clareza,-manutenibilidade-e-efici%C3%AAncia-do-c%C3%B3digo.">Boas práticas na criação de funções em programação são essenciais para garantir a clareza, manutenibilidade e eficiência do código.<a class="anchor-link" href="#Boas-pr%C3%A1ticas-na-cria%C3%A7%C3%A3o-de-fun%C3%A7%C3%B5es-em-programa%C3%A7%C3%A3o-s%C3%A3o-essenciais-para-garantir-a-clareza,-manutenibilidade-e-efici%C3%AAncia-do-c%C3%B3digo.">¶</a></h3><ol>
+<h4 id="Boas-pr%C3%A1ticas-na-cria%C3%A7%C3%A3o-de-fun%C3%A7%C3%B5es-em-programa%C3%A7%C3%A3o-s%C3%A3o-essenciais-para-garantir-a-clareza,-manutenibilidade-e-efici%C3%AAncia-do-c%C3%B3digo.">Boas práticas na criação de funções em programação são essenciais para garantir a clareza, manutenibilidade e eficiência do código.<a class="anchor-link" href="#Boas-pr%C3%A1ticas-na-cria%C3%A7%C3%A3o-de-fun%C3%A7%C3%B5es-em-programa%C3%A7%C3%A3o-s%C3%A3o-essenciais-para-garantir-a-clareza,-manutenibilidade-e-efici%C3%AAncia-do-c%C3%B3digo.">¶</a></h4><ol>
 <li><p><strong>Nome Claro e Descritivo</strong>: O nome de uma função deve refletir claramente o que ela faz. Evite nomes genéricos e dê preferência a nomes que descrevam a ação realizada ou o resultado retornado.</p>
 </li>
 <li><p><strong>Funções Devem Ser Curtas e Focadas</strong>: Uma função deve realizar uma única tarefa ou um grupo muito relacionado de tarefas. Se uma função está se tornando longa ou complexa, considere dividí-la em funções menores.</p>
@@ -8344,7 +8344,7 @@ O nome da função inclui sempre () - parentesis</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Mas e se pretendermos passar um valor que é calculado dentro da função para o resto do programa uma solução passa por fazer com que a função devolva um valor.</p>
+<p>Mas e se pretendermos <b>passar</b> um valor que é calculado dentro da função para o resto do programa uma solução passa por fazer com que a função <i>devolva</i> um valor.</p>
 </div>
 </div>
 </div>
@@ -8368,6 +8368,17 @@ O nome da função inclui sempre () - parentesis</p>
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Com a instrução return a função devolve um valor.</p>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8388,6 +8399,51 @@ O nome da função inclui sempre () - parentesis</p>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Tem na carteira </span><span class="si">{</span><span class="n">carteira</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Opcionalmente podemos indicar o <b>tipo de dados que a função vai devolver</b> na sua definição.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">Troco</span><span class="p">(</span><span class="n">pagar</span><span class="p">,</span><span class="n">dinheiro</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="n">dinheiro</span> <span class="o">=</span> <span class="n">dinheiro</span> <span class="o">-</span> <span class="n">pagar</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Pagou </span><span class="si">{</span><span class="n">pagar</span><span class="si">}</span><span class="s2"> e ficou com </span><span class="si">{</span><span class="n">dinheiro</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="c1">#vamos devolver o valor</span>
+    <span class="k">return</span> <span class="n">dinheiro</span>
+
+<span class="n">carteira</span> <span class="o">=</span><span class="mi">100</span>
+<span class="c1">#Vamos chamar a função e guardar o valor que retorna</span>
+<span class="n">carteira</span><span class="o">=</span><span class="n">Troco</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="n">carteira</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Tem na carteira </span><span class="si">{</span><span class="n">carteira</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Os tipos de dados podem ser int, str, float, bool, Any, entre outros que vamos estudar mais tarde como list, dict, set e tuple</p>
 </div>
 </div>
 </div>
